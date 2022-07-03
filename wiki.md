@@ -63,7 +63,7 @@
 ## Runtime Cheatsheet - God help me
 - [AlgoMonster](https://algo.monster/problems/runtime_summary)
 - Nope
-<br />
+
 ## Data Structures
 1. Stacks
     - [AlgoMonster](https://algo.monster/problems/stack_intro)
@@ -76,6 +76,8 @@
         - **Push** = into the stack
         - **Peek** = look at top item (last inserted item)
         - **Pop** = remove top item
+        - **isEmpty** = check if empty
+        - **Size** = returns num of elements
     - *Recursion* and *DFS* use stack
     - Overflow (inserting when stack is full) and underflow errors (inserting on empty stack = check if stack is empty first)
     - Insertion and deletion from the list have a time complexity of O(1) (on average)
@@ -84,7 +86,7 @@
         1. Empty stack. Popping from an empty stack
         2. Stack with one item
         3. Stack with two items
-    <br />    
+
     - ### Practice
         Basic
         1. [valid parens](https://leetcode.com/problems/valid-parentheses/)
