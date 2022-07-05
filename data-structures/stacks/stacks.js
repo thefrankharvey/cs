@@ -1,5 +1,5 @@
 var isValid = function(s) {
-    stack = []
+    const stack = []
     openers = ['[', '{', '(']
     for (const char of s) {
         if (openers.includes(char)) {
