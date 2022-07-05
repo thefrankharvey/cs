@@ -14,7 +14,7 @@
 - Overflow (inserting when stack is full) and underflow errors (inserting on empty stack = check if stack is empty first)
 - Insertion and deletion from the list have a time complexity of O(1) (on average)
 - Search is O(n) = has to search each of the n elements
-- Corner cases
+- ### Corner cases
     1. Empty stack. Popping from an empty stack
     2. Stack with one item
     3. Stack with two items
