@@ -12,11 +12,12 @@ function reverseString(str) {
     for (i = str.length-1; i >= 0; i--) {
         reversed += str[i];
     }
+    console.log(reversed)
     return reversed;
 }
 
 
-reverseString('hey')
+reverseString('hello')
 
 function reverse2(str) {
     return str.split('').reverse().join('')
