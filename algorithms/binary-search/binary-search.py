@@ -1,14 +1,15 @@
 # https://algo.monster/problems/binary_search_intro
 # https://designgurus.org/path-player?courseid=grokking-the-coding-interview&unit=grokking-the-coding-interview_1628743417172_1Unit
 # https://www.tryexponent.com/courses/software-engineering/data-structures/binary-search
-
+# https://www.techinterviewhandbook.org/algorithms/sorting-searching/
 # vanilla binary search
-input = [1, 2, 3, 4, 6, 9, 11, 14, 29, 35]
-target=11
-
 from typing import List
 from numpy import sort
 import math
+
+input = [1, 2, 3, 4, 6, 9, 11, 14, 29, 35]
+target=11
+
 
 def binary_search(arr: List[int], target: int) -> int:
     arr.sort()
@@ -59,5 +60,29 @@ def find_boundary(arr: List[bool]) -> int:
     print(boundary_index)
     return boundary_index
 
+# find_boundary(input)
 
-find_boundary(input)
+def search(nums: List[int], target: int) -> int:
+    left, right = 0, len(nums)-1
+    while left <= right:
+        mid = (left + right) // 2
+        if nums[mid] > target:
+            right = mid - 1
+        elif nums[mid] < target:
+            left = mid + 1
+        else:
+            return mid
+    return -1
+
+nums = [-1,0,3,5,9,12]
+target = 9
+print(search(nums, target))
+# // leetcode Runtime: 266 ms, faster than 84.24% of Python3 online submissions for Binary Search.
+# // Memory Usage: 15.4 MB, less than 72.77% of Python3 online submissions for Binary Search.
+
+# class Solution:
+#     def search(self, nums: List[int], target: int) -> int:
+
+# def first_not_smaller(arr: List[int], target: int) -> int:
+#     # WRITE YOUR BRILLIANT CODE HERE
+#     return 0
