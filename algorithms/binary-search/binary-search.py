@@ -76,13 +76,49 @@ def search(nums: List[int], target: int) -> int:
 
 nums = [-1,0,3,5,9,12]
 target = 9
-print(search(nums, target))
+# print(search(nums, target))
 # // leetcode Runtime: 266 ms, faster than 84.24% of Python3 online submissions for Binary Search.
 # // Memory Usage: 15.4 MB, less than 72.77% of Python3 online submissions for Binary Search.
 
-# class Solution:
-#     def search(self, nums: List[int], target: int) -> int:
+# First Element Not Smaller Than Target
+# Given an array of integers sorted in increasing order and a target, find the index of the first element in the array that is larger than or equal to the target. Assume that it is guaranteed to find a satisfying number.
+def first_not_smaller(arr: List[int], target: int) -> int:
+    left, right = 0, len(arr)-1
+    boundary_index = -1
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] >= target:
+            boundary_index = mid
+            right = mid - 1
+        else:
+            left = mid + 1
+    return boundary_index
 
-# def first_not_smaller(arr: List[int], target: int) -> int:
-#     # WRITE YOUR BRILLIANT CODE HERE
-#     return 0
+nums = [1, 3, 3, 5, 8, 8, 10]
+target = 1
+
+# print(first_not_smaller(nums, target))
+
+# Given a sorted array of integers and a target integer, find the first occurrence of the target and return its index. Return -1 if the target is not in the array.
+
+
+# Input:
+# arr = [1, 3, 3, 3, 3, 6, 10, 10, 10, 100]
+# target = 3
+# Output: 1
+
+def find_first_occurrence(arr: List[int], target: int) -> int:
+    left, right = 0, len(arr)-1
+    candidate = -1
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] >= target:
+            candidate = mid
+            right = mid - 1
+        else:
+            left = mid + 1
+    return candidate
+
+arr = [1, 3, 3, 3, 3, 6, 10, 10, 10, 100]
+target = 10
+print(find_first_occurrence(arr, target))
