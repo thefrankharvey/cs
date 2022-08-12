@@ -6,6 +6,8 @@
 
 Basic
 - removing, inserting, or finding arbitrary values in an array can be a linear-time operation
+- to find subarrays use sliding window
+- sliding window is a subset of dynamic programming
 
 Pros
 - fast lookups

@@ -13,6 +13,7 @@ Basics
     - **Dynamic** - can grow or shrink as needed w/out given size of memory allocated
 - Cons
     - **Traversal** = O(n) - access/search - cannot access by index
+    - aren’t as good for indexing as arrays or as good for searching as hash tables and trees
 
 
 - ### Common Routines

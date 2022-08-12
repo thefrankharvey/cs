@@ -1,5 +1,7 @@
 // arrays under the hood 
 // https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/learn/lecture/12301306#overview
+// array cheatsheet for coding interviews
+// https://www.techinterviewhandbook.org/algorithms/array/
 // treat string questions as array questions
 
 class MyArray {

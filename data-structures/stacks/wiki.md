@@ -3,6 +3,7 @@
 - [Udemy](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/learn/lecture/12332948#overview)
 - [TechInterviewHandbook](https://www.techinterviewhandbook.org/algorithms/stack/)
 - LIFO - 'last in first out'
+- can only add and remove elements to them from one side
 - use arrays or singly linked lists
 - 3 operations
     - **Push** = into the stack
