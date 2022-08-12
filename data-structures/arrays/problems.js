@@ -26,7 +26,6 @@ function reverse2(str) {
 const reverse3 = str => [...str].reverse.join('')
 
 // merge sorted arrays
-
 array1 = [0,1,3,7,28]
 array2 = [2,5,9,30]
 
@@ -41,6 +40,7 @@ function mergeArrays(arr1, arr2) {
 // mergeArrays(array1, array2)
 
 // diff arrays
+// Write a function diff(arrA, arrB) that accepts two arrays and returns a new array that contains all values that are not contained in both input arrays. The order of numbers in the result array does not matter.
 // https://www.tryexponent.com/courses/software-engineering/swe-practice/difference-of-arrays
 
 // define the problem - search problem
@@ -56,7 +56,7 @@ function diff(nums1,nums2){
         return 'pass two valid nonempty arrays'
     }
 
-    // solve purely using sets - hideous but faster by than array solve by 50% - perf 0.02 ms
+    // solve purely using sets - hideous but faster than array solve by 50% 
     const setA = new Set(nums1)
     const setB = new Set(nums2)
     let diffs = []
@@ -107,5 +107,20 @@ var findDifference = function(nums1, nums2) {
 
 findDifference(a,b)
 
+// Two Sum - LeetCode
+const nums = [2,7,11,15]
+const target = 9
+var twoSum = function(nums, target) {
+    
+};
+
 // Runtime: 172 ms, faster than 61.05% of JavaScript online submissions
 // Memory Usage: 48.6 MB, less than 52.89% of JavaScript online submissions
+
+// Find Largest Numbers
+// Let's say we have a long list of unsorted numbers (potentially millions), and we want to find the M largest numbers contained in it. Implement a function find_largest(input, m) that will find and return the largest m values given an input array or file.
+// https://www.tryexponent.com/courses/software-engineering/swe-practice/largest-numbers
+
+function findLargest(input, m) {
+
+}
