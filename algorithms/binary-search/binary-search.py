@@ -121,4 +121,38 @@ def find_first_occurrence(arr: List[int], target: int) -> int:
 
 arr = [1, 3, 3, 3, 3, 6, 10, 10, 10, 100]
 target = 10
-print(find_first_occurrence(arr, target))
+# print(find_first_occurrence(arr, target))
+
+# first try
+# def square_root(n: int) -> int:
+#     spread_n = list(range(n))
+#     print(spread_n)
+#     left, right = 0, math.ceil(n / 2)
+#     print(left, ' ', right)
+#     candidate = -1
+#     while left <= right:
+#         mid = (left + right) // 2
+#         if arr[mid] * arr[mid] > n:
+#             right = mid - 1
+#             print('right: ', right, '\n')
+#         else:
+#             left = mid + 1
+#     return right
+
+def square_root(n: int) -> int:
+    if n == 0 or n == 1:
+        return n
+    left, right = 1, n
+    candidate = -1
+    while left <= right:
+        mid = (left + right) // 2
+        if mid * mid <= n:
+            candidate = mid
+            left = mid + 1
+        else:
+            right = mid - 1
+    return candidate
+
+target = 13
+
+print(square_root(target))
