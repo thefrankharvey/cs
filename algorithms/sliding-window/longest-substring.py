@@ -1,22 +1,25 @@
 # Find the length of the longest substring of a given string without repeating characters
+# edge cases
+# 1 letter
+# 2 or > 2 ALL unique? = if the window len == len of string
 
-
-# start  s
-input = 'abcdbea'
-# end       e
- 
-# Output: 3
+input = 'aaabcbbababb'
 
 def longest_substring(string: str) -> int:
-    result = []
-    start, end = 0, 0
-    while end < len(string)-1:
-        end+=1
-        window = string[start:end]
-        if string[end] in window and len(window) > len(result):
-            result=window
-            start=end
+    charSet = set()
+    left = 0
+    result = len(string) if len(string) < 2 else 0
 
-    return (len(result))
+    for right in range(len(string)):
+        while string[right] in charSet:
+            charSet.remove(string[left])
+            left += 1
+
+        charSet.add(string[right])
+        right+=1
+        window_size = right - left
+        result = max(result, window_size)
+
+    return result
 
 print(longest_substring(input))
