@@ -1,3 +1,5 @@
+const nums = [-1,0,1,2,-1,-4]
+
 var threeSum = function(nums) {
     const results = [];
     const target = 0;
@@ -29,3 +31,5 @@ var threeSum = function(nums) {
     }
     return results;
   };
+
+  console.log(threeSum(nums))
