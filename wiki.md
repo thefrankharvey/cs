@@ -75,3 +75,22 @@
         Pro
         [advanced problems](https://www.techinterviewhandbook.org/algorithms/stack/#recommended-practice-questions)
 
+## Problem Solving Patterns
+- Problems assess your ability to:
+    1. write valid code
+    2. think independently
+    3. think analytically
+    4. discuss your ideas
+    5. reason through problems and constraints
+    6. operate under pressure
+- analyze/clarify the requirements and inputs
+- think about appropriate data structures
+- discuss 'brute force' solution
+- then inquire about time and space constraints
+- write tests
+
+
+## Breakdown problem to root
+- Is this a search problem, swap, etc.
+- Identify keywords
+

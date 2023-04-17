@@ -5,6 +5,7 @@
 
 input = 'aaabcbbababb'
 
+
 def longest_substring(string: str) -> int:
     charSet = set()
     left = 0
@@ -22,4 +23,36 @@ def longest_substring(string: str) -> int:
 
     return result
 
-print(longest_substring(input))
+# print(longest_substring(input))
+
+# {p:0
+#  w:5
+#   k:3
+#   e:4   
+# }
+# res = 3
+#            l 
+input2 = 'pwwkewokewpyr'
+#              r
+def longest2(s: str) -> int:
+    # record indices of prev repeat chars
+    # or char before first unique?
+    left = right= 0
+    result = 0
+    tracker = {}
+
+    while right < len(s)-1:
+        right+=1
+        window = s[left:right]
+        print(window)
+        if s[right] in tracker:
+            print
+            result = max(result, len(window))
+            left=right
+            # ans = 3
+
+        tracker[s[right]] = right
+    
+    return result
+
+print(longest2(input2))

@@ -1,16 +1,12 @@
-from turtle import end_fill
 from typing import List
 
-    # find lowest price
-    # find the highest price after lowest
-    # find the max diff
-        # buy price - sell price
-
-# Return the maximum profit you can achieve from this transaction
-# If you cannot achieve any profit, return 0.
-
-
 prices = [7,3,1,5,3,6,4]
+# notice peaks and valleys - imagine a graph/chart
+# break down to binary decision
+# what do we need to know - what is lowest and what is hightest diff
+# is this minimum?
+# if so add to min tracker - if lowest record it
+# if not - operate - subtract min from this num - record as largest diff
 # Output: 5
 # 5
 # what defines max profit
@@ -32,6 +28,10 @@ def maxProfit(prices: List[int]) -> int:
     
     return max_profit
 
+print(maxProfit(prices))
+
+
+
 # brute force
 # def maxProfit(prices: List[int]) -> int:
 #     output = 0
@@ -46,5 +46,3 @@ def maxProfit(prices: List[int]) -> int:
 #         left+=1
     
 #     return output
-
-print(maxProfit(prices))

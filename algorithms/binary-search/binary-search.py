@@ -155,4 +155,28 @@ def square_root(n: int) -> int:
 
 target = 13
 
-print(square_root(target))
+# print(square_root(target))
+
+arr = [3,9,8,6,4]
+def peak_of_mountain_array(arr: List[int]) -> int:
+    if len(arr) < 3:
+        return 0
+    candidate = -1
+    left, right = 0, len(arr)-1
+
+    while left < right:
+        mid = (left+right) // 2
+        if arr[mid] < arr[mid+1]:
+            left = mid + 1
+        else:
+            candidate = mid
+            right = mid
+    return candidate
+
+print(peak_of_mountain_array(arr))
+
+
+
+def find_min_rotated(arr: List[int]) -> int:
+    # WRITE YOUR BRILLIANT CODE HERE
+    return 0

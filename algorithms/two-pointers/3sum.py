@@ -16,8 +16,7 @@ def threeSum(nums: List[int]) -> List[List[int]]:
     nums.sort()
     result = []
     for i, num in enumerate(nums):
-        if nums[i] > 0:
-            break
+        if nums[i] > 0: break
         if nums[i-1] != nums[i]:
             lo = i+1
             high = len(nums)-1

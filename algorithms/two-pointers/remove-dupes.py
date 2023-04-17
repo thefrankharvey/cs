@@ -4,7 +4,7 @@ input_arr=[0,0,1,1,1,1,2,2,3,3,9,9,9,11]
 # return new length
 # inplace
 #  SORTED
-
+# work?
 def remove_dupes(arr):
     slow, fast = 0, 0
     while fast < len(arr)-1:
